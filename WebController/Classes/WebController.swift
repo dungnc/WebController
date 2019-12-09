@@ -383,6 +383,16 @@ open class WebController: UIViewController {
         self.webView.evaluateJavaScript(javaScriptString, completionHandler: completionHandler)
     }
     
+    /**
+     Load a html string.
+     - Parameters:
+     - htmlString: HTML to Load WebView.
+     - completionHandler: A block to invoke when script evaluation completes or fails.
+     */
+    public func loadHTMLString(_ htmlString: String) {
+        self.webView.loadHTMLString(htmlString, baseURL: nil)
+    }
+    
     
     // MARK: Private Method
     
